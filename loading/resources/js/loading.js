@@ -5,14 +5,8 @@ html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
 window.addEventListener('load', () => {
     setTimeout(() => {
-        //로딩속도 구현
-
-        loading.style.opacity = '0';
         html.style.overflow = 'auto'; //스크롤 방지 해제
-
-        setTimeout(() => {
-            loading.style.display = 'none';
-        }, 400);
+        loading.style.display = 'none';
     }, 5000);
 });
 
@@ -20,8 +14,7 @@ const text = 'Loading...'; // 타이핑할 문구
 let index = 0;
 
 function typeWriter() {
-    const element =
-        document.getElementsByClassName('loading-text')[0];
+    const element = document.querySelector('.loading-text');
 
     if (index < text.length) {
         element.textContent += text[index];

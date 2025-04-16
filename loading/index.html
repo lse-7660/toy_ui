@@ -10,14 +10,31 @@
         <!-- css -->
         <link
             rel="stylesheet"
-            href="./resources/css/sample.css"
+            href="./resources/css/global.css"
         />
+        <!-- js -->
         <script
             defer
             src="./resources/js/loading.js"
         ></script>
+        <script
+            defer
+            src="./resources/js/modal.js"
+        ></script>
     </head>
     <body>
+        <!-- modal -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div
+                    class="modal-images"
+                    id="modal-images"
+                ></div>
+            </div>
+        </div>
+        <!-- loading -->
         <div class="loading">
             <img
                 class="spinner"
@@ -26,20 +43,56 @@
             />
             <span class="loading-text"></span>
         </div>
+        <!-- background -->
         <div class="gallery">
-            <p>모브사이코 100<br />생일 카페 협력 포스터</p>
+            <img
+                class="mp100-logo"
+                src="./resources/img/mp100-logo.jpg"
+                alt=""
+            />
+            <p>비공식 생일 카페 협력 작업물</p>
             <div class="images">
-                <div class="image-box">
+                <div
+                    class="image-box"
+                    data-images="./resources/img/mob/mob_poster.jpg,
+                ./resources/img/mob/mob_photocard.jpg "
+                >
                     <img
-                        src="./resources/img/KakaoTalk_20250407_223145119.jpg"
-                        alt="모브 생일 포스터"
+                        src="./resources/img/mob/mob_poster.jpg"
+                        alt="모브 생일 카페"
                     />
+                    <span class="image-text"
+                        >카게야마 시게오<br />생일 카페
+                        협력</span
+                    >
                 </div>
-                <div class="image-box">
+                <div
+                    class="image-box"
+                    data-images="./resources/img/ritsu/ritsu_poster.jpg,
+                    ./resources/img/ritsu/ritsu_photocard.jpg,
+                    ./resources/img/ritsu/ritsu_transparentcard.jpg "
+                >
                     <img
-                        src="./resources/img/KakaoTalk_20250407_003444067_02.jpg"
-                        alt="리츠 생일 포스터"
+                        src="./resources/img/ritsu/ritsu_poster.jpg"
+                        alt="리츠 생일 카페"
                     />
+                    <span class="image-text"
+                        >카게야마 리츠<br />생일 카페
+                        협력</span
+                    >
+                </div>
+                <div
+                    class="image-box"
+                    data-images="./resources/img/shimazaki/shimazaki_stand.jpg"
+                >
+                    <img
+                        src="./resources/img/shimazaki/shimazaki_stand.jpg"
+                        alt="시마자키 생일 카페"
+                    />
+                    <span class="image-text"
+                        >시마자키 료<br />생일 카페
+                        협력</span
+                    >
                 </div>
             </div>
         </div>
